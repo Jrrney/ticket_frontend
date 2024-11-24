@@ -1,0 +1,22 @@
+<main>
+  <div class="card">
+    <p-table [value]="projects" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Desc</th>
+          <th>Completed</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-project>
+        <tr (click)="onRowClick(project.id)">
+          <td>{{ project.id }}</td>
+          <td>{{ project.name }}</td>
+          <td>{{ project.description }}</td>
+          <td>{{ project.completed }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</main>
